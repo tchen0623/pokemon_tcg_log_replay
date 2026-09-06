@@ -10,6 +10,7 @@
 完成后生成 data/full-images.json 清单, 网页端会自动优先使用本地卡图。
 """
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -22,7 +23,7 @@ INDEX = ROOT / "data" / "cards-full.json"
 OUT_DIR = ROOT / "assets" / "cards-full"
 MANIFEST = ROOT / "data" / "full-images.json"
 ROTATION = {"F", "G", "H", "I", "J"}
-THREADS = 16
+THREADS = int(os.environ.get("DL_THREADS", "16"))
 RETRIES = 3
 TIMEOUT = 60
 
@@ -85,19 +86,26 @@ def main():
     done = fail = 0
 
     def work(card):
-        url = card["image"].replace("/high.png", "/low.png")
         out = OUT_DIR / f"{card['id']}.{EXT}"
-        for attempt in range(RETRIES):
-            try:
-                raw = fetch(url)
-                data = to_webp(raw) if USE_WEBP else raw
-                out.write_bytes(data)
-                return True
-            except Exception as e:
-                if attempt == RETRIES - 1:
-                    print(f"\nFAIL {card['id']} {url}: {e}", flush=True)
-                    return False
-                time.sleep(1.5 * (attempt + 1))
+        # 部分 TG/GG/ Promo 卡没有 low.png — 404 时退回 high.png
+        urls = [card["image"].replace("/high.png", "/low.png"), card["image"]]
+        last_err = None
+        for url in urls:
+            for attempt in range(RETRIES):
+                try:
+                    raw = fetch(url)
+                    data = to_webp(raw) if USE_WEBP else raw
+                    out.write_bytes(data)
+                    return True
+                except HTTPError as e:
+                    last_err = e
+                    if e.code == 404:
+                        break  # 换下一个 URL
+                    time.sleep(1.5 * (attempt + 1))
+                except Exception as e:
+                    last_err = e
+                    time.sleep(1.5 * (attempt + 1))
+        print(f"\nFAIL {card['id']}: {last_err}", flush=True)
         return False
 
     with ThreadPoolExecutor(max_workers=THREADS) as ex:
