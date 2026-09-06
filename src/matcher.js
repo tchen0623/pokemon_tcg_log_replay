@@ -76,7 +76,12 @@ function scorePrinting(card, e) {
 }
 
 // 把索引记录转成应用内的 cardDb 条目
-function toEntry(card, localImages, name) {
+// 图片优先级: 本地精修缓存(42张高清) → 本地全量缓存(webp) → TCGdex CDN
+function toEntry(card, localImages, name, fullImages) {
+  const local = localImages[name]
+    || (fullImages && card.id && fullImages.ids.has(card.id)
+        ? `assets/cards-full/${card.id}.${fullImages.format}` : null)
+    || card.image;
   return {
     id: card.id,
     category: card.category,
@@ -92,13 +97,13 @@ function toEntry(card, localImages, name) {
     weaknesses: card.weaknesses,
     resistances: card.resistances,
     retreat: card.retreat,
-    _imageFile: localImages[name] || card.image, // 本地缓存优先, 否则 TCGdex CDN
+    _imageFile: local,
     _setName: card.setName,
   };
 }
 
 // 对一份解析后的日志执行匹配; cachedDb 中的已有条目(本地精修缓存)优先
-export function matchCards(parsed, fullIndex, cachedDb, localImages) {
+export function matchCards(parsed, fullIndex, cachedDb, localImages, fullImages) {
   const { names, evidence } = collectEvidence(parsed.actions);
   const db = {};
   const misses = [];
@@ -112,7 +117,7 @@ export function matchCards(parsed, fullIndex, cachedDb, localImages) {
       const sc = scorePrinting(c, e);
       if (sc > bestS) { best = c; bestS = sc; } // 同分保持靠前的(已按日期/编号排序)
     }
-    db[name] = toEntry(best, localImages || {}, name);
+    db[name] = toEntry(best, localImages || {}, name, fullImages);
   }
   return { db, misses };
 }

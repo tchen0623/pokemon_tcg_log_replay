@@ -7,6 +7,7 @@ let cardDb = {};
 let fullIndex = null;   // TCGdex 全量离线索引
 let cachedDb = {};      // 本地精修缓存(含本地卡图)
 let localImages = {};   // 卡名 -> 本地图片路径
+let fullImages = null;  // 全量本地卡图清单 { format, ids:Set }
 let game = null;      // { playerNames, states, actions, stats, decklists, gameOver }
 let idx = 0;          // current state index (0 = initial, states.length-1 = after last action)
 let playing = false;
@@ -25,6 +26,8 @@ async function loadDb() {
   };
   cachedDb = (await fetchJson('data/cards-db.json')) || {};
   localImages = (await fetchJson('data/local-images.json')) || {};
+  const fi = await fetchJson('data/full-images.json');
+  if (fi && fi.ids) fullImages = { format: fi.format || 'webp', ids: new Set(fi.ids) };
   cardDb = cachedDb;
 }
 
@@ -133,7 +136,7 @@ async function loadLog(text, label) {
     hideLoading();
   }
   if (fullIndex) {
-    const m = matchCards(parsed, fullIndex, cachedDb, localImages);
+    const m = matchCards(parsed, fullIndex, cachedDb, localImages, fullImages);
     cardDb = m.db;
     if (m.misses.length) console.warn('未收录卡牌:', m.misses);
     game = buildGame(parsed, cardDb);
