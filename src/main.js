@@ -72,11 +72,28 @@ function hideLoading() { $('#loadbar').classList.remove('show'); }
 function cardImg(name, cls = '') {
   const c = name && cardDb[name];
   if (c && c._imageFile) {
-    return `<div class="card ${cls}" data-name="${esc(name)}"><img src="${c._imageFile}" alt="${esc(name)}" loading="lazy"></div>`;
+    const low = /\/high\.png$/.test(c._imageFile) ? c._imageFile.replace(/\/high\.png$/, '/low.png') : '';
+    return `<div class="card ${cls}" data-name="${esc(name)}"><img src="${c._imageFile}" ${low ? `data-low="${low}"` : ''} alt="${esc(name)}" loading="lazy"></div>`;
   }
   if (name) return `<div class="card placeholder ${cls}" data-name="${esc(name)}">${esc(name)}</div>`;
   return `<div class="card back ${cls}"></div>`;
 }
+
+// 卡图加载失败的全局兜底: high.png → low.png → 占位卡面
+document.addEventListener('error', (e) => {
+  const img = e.target;
+  if (!(img instanceof HTMLImageElement)) return;
+  const low = img.dataset.low;
+  if (low && !img.dataset.triedLow) { img.dataset.triedLow = '1'; img.src = low; return; }
+  const card = img.closest('.card');
+  if (card) {
+    card.classList.add('placeholder');
+    card.textContent = card.dataset.name || '';
+    img.remove();
+  } else {
+    img.style.display = 'none'; // 悬浮预览里的图片: 静默隐藏
+  }
+}, true);
 const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // ---------- load & build ----------

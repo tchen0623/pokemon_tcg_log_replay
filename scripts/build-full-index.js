@@ -39,12 +39,21 @@ function evalBatch(lits) {
 const pickEn = (v) => (v && typeof v === 'object' ? (v.en || v.fr || Object.values(v)[0]) : v);
 
 const sets = {};
-const raw = []; // { lit, setDir, localId }
+const raw = []; // { lit, setDir, localId, seriesId }
 let bad = 0;
 
 for (const series of fs.readdirSync(dataDir)) {
   const sDir = path.join(dataDir, series);
   if (!fs.statSync(sDir).isDirectory()) continue;
+  // 系列文件 data/<Series>.ts — 提供图片 URL 需要的 seriesId (如 sv / swsh)
+  let seriesId = null;
+  const serieFile = sDir + '.ts';
+  if (fs.existsSync(serieFile)) {
+    const src = fs.readFileSync(serieFile, 'utf8');
+    const lit = extractObject(src, /const \w+\s*:\s*Serie\s*=/);
+    const obj = lit && evalBatch([lit])[0];
+    if (obj && obj.id) seriesId = obj.id;
+  }
   for (const entry of fs.readdirSync(sDir)) {
     const full = path.join(sDir, entry);
     if (entry.endsWith('.ts')) {
@@ -61,7 +70,7 @@ for (const series of fs.readdirSync(dataDir)) {
       let lit = extractObject(src, /const \w+\s*:\s*Card\s*=/);
       if (!lit) { bad++; continue; }
       lit = lit.replace(/set\s*:\s*Set\s*,?/, '');
-      raw.push({ lit, setDir: entry, localId: f.slice(0, -3) });
+      raw.push({ lit, setDir: entry, localId: f.slice(0, -3), seriesId });
     }
   }
 }
@@ -74,7 +83,7 @@ for (let i = 0; i < raw.length; i += B) {
   const slice = raw.slice(i, i + B);
   const objs = evalBatch(slice.map(s => s.lit));
   for (let j = 0; j < slice.length; j++) {
-    const c = objs[j], { setDir, localId } = slice[j];
+    const c = objs[j], { setDir, localId, seriesId } = slice[j];
     if (!c) { bad++; continue; }
     const name = pickEn(c.name);
     if (!name) continue;
@@ -98,7 +107,7 @@ for (let i = 0; i < raw.length; i += B) {
       abilities: (c.abilities || []).map(a => ({ name: pickEn(a.name), effect: pickEn(a.effect), type: a.type })).filter(a => a.name),
       attacks: (c.attacks || []).map(a => ({ name: pickEn(a.name), cost: a.cost, damage: a.damage != null ? String(a.damage) : undefined, effect: pickEn(a.effect) })).filter(a => a.name),
       effect: pickEn(c.effect) || undefined,
-      image: setId ? `https://assets.tcgdex.net/en/${setId}/${localId}/high.png` : undefined,
+      image: (setId && seriesId) ? `https://assets.tcgdex.net/en/${seriesId}/${setId}/${localId}/high.png` : undefined,
     };
     if (!rec.abilities.length) delete rec.abilities;
     if (!rec.attacks.length) delete rec.attacks;
