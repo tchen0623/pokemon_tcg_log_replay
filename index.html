@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTCGL Replay MVP — 宝可梦 Live 对战回放</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo">PTCGL <span>Replay+</span></div>
+    <div class="sub">战斗日志 → 可视化回放 · 本地解析 · 血量/能量全还原</div>
+    <span class="badge ok" id="parse-badge" style="display:none"></span>
+    <span class="badge warn" id="raw-badge" style="display:none"></span>
+    <div class="spacer"></div>
+    <button id="btn-decklist">📋 卡组清单</button>
+    <button id="btn-stats">📊 对局统计</button>
+    <button id="btn-paste">📋 粘贴日志</button>
+    <button class="primary" id="btn-file">📁 导入日志</button>
+    <input type="file" id="file-input" accept=".txt" hidden>
+  </header>
+
+  <div id="stage">
+    <div id="board-wrap">
+      <div id="gameover"></div>
+      <div id="board"></div>
+      <div id="center-band"></div>
+    </div>
+    <div id="log-wrap">
+      <div id="log-head"><h2>Action Log</h2><span class="sub" id="log-count"></span></div>
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <div id="controls">
+    <button id="ctl-start" title="Home">⏮</button>
+    <button id="ctl-prev" title="←">◀</button>
+    <button class="primary" id="ctl-play" title="Space">▶</button>
+    <button id="ctl-next" title="→">▶</button>
+    <button id="ctl-end" title="End">⏭</button>
+    <button id="ctl-turn-prev" title="Shift+←">⏪ 回合</button>
+    <button id="ctl-turn-next" title="Shift+→">回合 ⏩</button>
+    <input type="range" id="scrub" min="0" max="0" value="0">
+    <div class="pos" id="pos">0 / 0</div>
+    <div class="speeds" id="speeds"></div>
+  </div>
+</div>
+
+<!-- modals -->
+<div class="modal-mask" id="modal-mask">
+  <div class="modal">
+    <button class="close ghost" id="modal-close">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div id="tooltip"></div>
+
+<div id="welcome">
+  <div class="modal" style="text-align:center">
+    <h3 style="font-size:20px">PTCGL <span style="color:var(--accent)">Replay+</span></h3>
+    <p style="color:var(--dim);margin:10px 0 20px">把 Pokémon TCG Live 的战斗日志变成可拖拽、可逐帧复盘的完整回放。<br>解析全程在本地浏览器完成。</p>
+    <div style="display:flex;gap:10px;justify-content:center">
+      <button class="primary" id="w-demo">观看演示对局 →</button>
+      <button id="w-file">导入日志文件</button>
+      <button id="w-paste">粘贴日志</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

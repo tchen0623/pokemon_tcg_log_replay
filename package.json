@@ -1,0 +1,9 @@
+{
+  "name": "ptcgl-replay-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "PTCGL battle log replay viewer MVP",
+  "scripts": {
+    "dev": "node server.js"
+  }
+}

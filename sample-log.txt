@@ -1,0 +1,320 @@
+Setup
+[fgh] Gary chose tails for the opening coin flip.
+[fgh] Ash won the coin toss.
+[fgh] Ash decided to go second.
+[fgh] Gary drew 7 cards for the opening hand.
+- 7 drawn cards.
+   • Professor's Research, Dreepy, Professor Turo's Scenario, Buddy-Buddy Poffin, Iono, Basic Psychic Energy, Latias ex
+[fgh] Ash drew 7 cards for the opening hand.
+- 7 drawn cards.
+[fgh] Ash took a mulligan.
+- Cards revealed from Mulligan 1
+   • Dragapult ex, Temple of Sinnoh, Basic Psychic Energy, Boss's Orders, Counter Catcher, Lance, Ultra Ball
+[fgh] Gary drew 1 more card because [fgh] Ash took at least 1 mulligan.
+- [fgh] Gary drew Radiant Alakazam.
+[fgh] Gary played Dreepy to the Active Spot.
+[fgh] Ash played Dreepy to the Active Spot.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Basic Fire Energy.
+[fgh] Gary played Buddy-Buddy Poffin.
+- [fgh] Gary drew 2 cards and played them to the Bench.
+   • Dreepy, Dreepy
+- [fgh] Gary shuffled their deck.
+[fgh] Gary played Latias ex to the Bench.
+[fgh] Gary attached Basic Psychic Energy to Dreepy on the Bench.
+[fgh] Gary ended their turn.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash played Arven.
+- [fgh] Ash drew 2 cards.
+   • Buddy-Buddy Poffin, Rescue Board
+- [fgh] Ash shuffled their deck.
+[fgh] Ash played Buddy-Buddy Poffin.
+- [fgh] Ash drew 2 cards and played them to the Bench.
+   • Dreepy, Budew
+- [fgh] Ash shuffled their deck.
+[fgh] Ash attached Rescue Board to Dreepy in the Active Spot.
+[fgh] Ash retreated Dreepy to the Bench.
+[fgh] Ash's Budew is now in the Active Spot.
+[fgh] Ash attached Basic Psychic Energy to Dreepy on the Bench.
+[fgh] Ash's Budew used Itchy Pollen on [fgh] Gary’s Dreepy for 10 damage.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Drakloak.
+[fgh] Gary evolved Dreepy to Drakloak on the Bench.
+[fgh] Gary attached Basic Fire Energy to Dreepy on the Bench.
+[fgh] Gary played Radiant Alakazam to the Bench.
+[fgh] Gary played Professor's Research.
+- [fgh] Gary discarded 2 cards.
+   • Professor Turo's Scenario, Iono
+- [fgh] Gary drew 7 cards.
+   • Mawile, Fezandipiti ex, Drakloak, Luminous Energy, Bloodmoon Ursaluna ex, Professor Turo's Scenario, Drakloak
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Hawlucha.
+[fgh] Gary evolved Dreepy to Drakloak on the Bench.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Luminous Energy.
+[fgh] Gary retreated Dreepy to the Bench.
+[fgh] Gary's Radiant Alakazam is now in the Active Spot.
+[fgh] Gary evolved Dreepy to Drakloak on the Bench.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Luminous Energy.
+[fgh] Gary ended their turn.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash evolved Dreepy to Drakloak on the Bench.
+[fgh] Ash evolved Dreepy to Drakloak on the Bench.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash played Arven.
+- [fgh] Ash drew 2 cards.
+   • Earthen Vessel, Defiance Vest
+- [fgh] Ash shuffled their deck.
+[fgh] Ash played Earthen Vessel.
+- [fgh] Ash discarded Defiance Vest.
+- [fgh] Ash drew 2 cards.
+   • Basic Psychic Energy, Basic Fire Energy
+- [fgh] Ash shuffled their deck.
+[fgh] Ash played Dreepy to the Bench.
+[fgh] Ash attached Basic Psychic Energy to Drakloak on the Bench.
+[fgh] Ash's Budew used Itchy Pollen on [fgh] Gary’s Radiant Alakazam for 10 damage.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Dreepy.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Boss's Orders.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Munkidori.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Lance.
+[fgh] Gary played Munkidori to the Bench.
+[fgh] Gary attached Luminous Energy to Munkidori on the Bench.
+[fgh] Gary played Lance.
+- [fgh] Gary drew 2 cards.
+   • Drakloak, Dragapult ex
+- [fgh] Gary shuffled their deck.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved a damage counter from [fgh] Gary's Drakloak to [fgh] Gary's Drakloak.
+[fgh] Gary evolved Drakloak to Dragapult ex on the Bench.
+[fgh] Gary ended their turn.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash evolved Drakloak to Dragapult ex on the Bench.
+[fgh] Ash played Lumineon V to the Bench.
+[fgh] Ash's Lumineon V used Luminous Sign.
+- [fgh] Ash drew Iono.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash played Fezandipiti ex to the Bench.
+[fgh] Ash played Ultra Ball.
+- [fgh] Ash discarded 2 cards.
+   • Professor Turo's Scenario, Klefki
+- [fgh] Ash drew Drakloak.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash evolved Dreepy to Drakloak on the Bench.
+[fgh] Ash attached Basic Fire Energy to Dragapult ex on the Bench.
+[fgh] Ash played Iono.
+- [fgh] Ash shuffled their hand.
+- [fgh] Ash put a card on the bottom of their deck.
+- [fgh] Gary shuffled their hand.
+- [fgh] Ash moved [fgh] Ash's 10 cards to their deck.
+   • Boss's Orders, Professor Turo's Scenario, Luminous Energy, Luminous Energy, Dreepy, Fezandipiti ex, Hawlucha, Drakloak, Bloodmoon Ursaluna ex, Mawile
+- [fgh] Ash drew 6 cards.
+- [fgh] Ash drew 6 cards.
+   • Buddy-Buddy Poffin, Iono, Boss's Orders, Lance, Counter Catcher, Night Stretcher
+[fgh] Ash retreated Budew to the Bench.
+[fgh] Ash's Dragapult ex is now in the Active Spot.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash's Dragapult ex used Phantom Dive on [fgh] Gary’s Radiant Alakazam for 200 damage.
+- [fgh] Ash put 6 damage counters on [fgh] Ash's Drakloak.
+[fgh] Gary's Radiant Alakazam was Knocked Out!
+[fgh] Ash took a Prize card.
+A card was added to [fgh] Ash's hand.
+[fgh] Gary's Munkidori is now in the Active Spot.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Iono.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Basic Psychic Energy.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Neo Upper Energy.
+[fgh] Gary played Night Stretcher.
+- [fgh] Gary moved [fgh] Gary's Radiant Alakazam to their hand.
+[fgh] Gary played Radiant Alakazam to the Bench.
+[fgh] Gary attached Neo Upper Energy to Dragapult ex on the Bench.
+[fgh] Gary retreated Munkidori to the Bench.
+[fgh] Gary's Dragapult ex is now in the Active Spot.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved 3 damage counters from [fgh] Gary's Drakloak to [fgh] Gary's Drakloak.
+[fgh] Gary's Radiant Alakazam used Painful Spoons.
+- [fgh] Gary moved a damage counter from [fgh] Gary's Dragapult ex to [fgh] Gary's Drakloak.
+[fgh] Gary played Counter Catcher.
+- [fgh] Ash's Fezandipiti ex was switched with [fgh] Ash's Dragapult ex to become the Active Pokémon.
+[fgh] Ash's Fezandipiti ex is now in the Active Spot.
+[fgh] Gary played Iono.
+- [fgh] Gary shuffled their hand.
+- [fgh] Gary put 5 cards on the bottom of their deck.
+   • Buddy-Buddy Poffin, Boss's Orders, Basic Psychic Energy, Lance, Iono
+- [fgh] Ash shuffled their hand.
+- [fgh] Gary moved [fgh] Gary's 8 cards to their deck.
+- [fgh] Gary drew 6 cards.
+   • Lance, Ultra Ball, Boss's Orders, Professor's Research, Buddy-Buddy Poffin, Budew
+- [fgh] Gary drew 5 cards.
+[fgh] Gary played Ultra Ball.
+- [fgh] Gary discarded 2 cards.
+   • Buddy-Buddy Poffin, Budew
+- [fgh] Gary drew Munkidori.
+- [fgh] Gary shuffled their deck.
+[fgh] Gary's Dragapult ex used Phantom Dive on [fgh] Ash’s Fezandipiti ex for 200 damage.
+- [fgh] Gary put 6 damage counters on [fgh] Gary's Drakloak.
+[fgh] Ash's Drakloak was Knocked Out!
+Dreepy was discarded from [fgh] Ash's Drakloak.
+[fgh] Gary took a Prize card.
+Dragapult ex was added to [fgh] Gary's hand.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash played Buddy-Buddy Poffin.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash's Drakloak used Recon Directive.
+- [fgh] Ash drew a card.
+[fgh] Ash played Dreepy to the Bench.
+[fgh] Ash played Professor Turo's Scenario.
+- [fgh] Ash moved [fgh] Ash's Fezandipiti ex to their hand.
+[fgh] Ash's Dragapult ex is now in the Active Spot.
+[fgh] Ash played Fezandipiti ex to the Bench.
+[fgh] Ash's Fezandipiti ex used Flip the Script.
+- [fgh] Ash drew 3 cards.
+[fgh] Ash evolved Drakloak to Dragapult ex on the Bench.
+[fgh] Ash played Temple of Sinnoh to the Stadium spot.
+[fgh] Ash attached Forest Seal Stone to Lumineon V on the Bench.
+[fgh] Ash's Dragapult ex used Phantom Dive on [fgh] Gary’s Dragapult ex for 200 damage.
+- [fgh] Ash put 6 damage counters on [fgh] Ash's Drakloak.
+[fgh] Gary's Drakloak was Knocked Out!
+Dreepy was discarded from [fgh] Gary's Drakloak.
+[fgh] Ash took a Prize card.
+A card was added to [fgh] Ash's hand.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Hawlucha.
+[fgh] Gary played Munkidori to the Bench.
+[fgh] Gary's Drakloak used Recon Directive.
+- [fgh] Gary drew Iono.
+[fgh] Gary evolved Drakloak to Dragapult ex on the Bench.
+[fgh] Gary played Professor's Research.
+- [fgh] Gary discarded 4 cards.
+   • Lance, Boss's Orders, Hawlucha, Iono
+- [fgh] Gary drew 7 cards.
+   • Budew, Jamming Tower, Luminous Energy, Bloodmoon Ursaluna ex, Boss's Orders, Mawile, Drakloak
+[fgh] Gary played Jamming Tower to the Stadium spot.
+- [fgh] Gary discarded Temple of Sinnoh.
+[fgh] Gary attached Luminous Energy to Munkidori on the Bench.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved 3 damage counters from [fgh] Gary's Dragapult ex to [fgh] Gary's Dreepy.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved 3 damage counters from [fgh] Gary's Dragapult ex to [fgh] Gary's Dreepy.
+[fgh] Gary's Dragapult ex used Phantom Dive on [fgh] Ash’s Dragapult ex for 200 damage.
+- [fgh] Gary put a damage counter on [fgh] Gary's Dreepy.
+- [fgh] Gary put a damage counter on [fgh] Gary's Fezandipiti ex.
+- [fgh] Gary put 4 damage counters on [fgh] Gary's Dragapult ex.
+[fgh] Ash's Dreepy was Knocked Out!
+[fgh] Gary took a Prize card.
+Dragapult ex was added to [fgh] Gary's hand.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash played Lost Vacuum.
+- [fgh] Ash moved [fgh] Ash's Buddy-Buddy Poffin to the Lost Zone.
+- [fgh] Ash moved [fgh] Ash's Jamming Tower to the Lost Zone.
+[fgh] Ash played Munkidori to the Bench.
+[fgh] Ash's Lumineon V used Star Alchemy.
+- [fgh] Ash drew a card.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash can no longer use VSTAR Powers.
+[fgh] Ash played Unfair Stamp.
+- [fgh] Ash shuffled 3 cards into their deck.
+- [fgh] Ash shuffled 6 cards into their deck.
+   • Budew, Bloodmoon Ursaluna ex, Boss's Orders, Mawile, Drakloak, Dragapult ex
+- [fgh] Ash drew 5 cards.
+- [fgh] Ash drew 2 cards.
+   • Fezandipiti ex, Counter Catcher
+[fgh] Ash's Fezandipiti ex used Flip the Script.
+- [fgh] Ash drew 3 cards.
+[fgh] Ash played Arven.
+- [fgh] Ash drew Super Rod.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash played Super Rod.
+- [fgh] Ash shuffled 2 cards into their deck.
+   • Drakloak, Dreepy
+[fgh] Ash's Dragapult ex used Phantom Dive on [fgh] Gary’s Dragapult ex for 200 damage.
+- [fgh] Ash put a damage counter on [fgh] Ash's Latias ex.
+- [fgh] Ash put a damage counter on [fgh] Ash's Radiant Alakazam.
+- [fgh] Ash put 2 damage counters on [fgh] Ash's Munkidori.
+- [fgh] Ash put 2 damage counters on [fgh] Ash's Munkidori.
+[fgh] Gary's Dragapult ex was Knocked Out!
+- 4 cards were discarded from [fgh] Gary's Dragapult ex.
+   • Basic Psychic Energy, Neo Upper Energy, Drakloak, Dreepy
+[fgh] Ash took 2 Prize cards.
+A card was added to [fgh] Ash's hand.
+A card was added to [fgh] Ash's hand.
+[fgh] Gary's Latias ex is now in the Active Spot.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Boss's Orders.
+[fgh] Gary played Fezandipiti ex to the Bench.
+[fgh] Gary's Fezandipiti ex used Flip the Script.
+- [fgh] Gary drew 3 cards.
+   • Mawile, Basic Fire Energy, Boss's Orders
+[fgh] Gary retreated Latias ex to the Bench.
+[fgh] Gary's Munkidori is now in the Active Spot.
+[fgh] Gary attached Basic Fire Energy to Munkidori in the Active Spot.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved 2 damage counters from [fgh] Gary's Munkidori to [fgh] Gary's Dragapult ex.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved a damage counter from [fgh] Gary's Latias ex to [fgh] Gary's Dragapult ex.
+[fgh] Gary's Radiant Alakazam used Painful Spoons.
+- [fgh] Gary moved 2 damage counters from [fgh] Gary's Dragapult ex to [fgh] Gary's Dragapult ex.
+[fgh] Gary's Munkidori used Mind Bend on [fgh] Ash’s Dragapult ex for 60 damage.
+- [fgh] Ash's Dragapult ex is now Confused.
+
+[fgh] Ash's Turn
+[fgh] Ash drew a card.
+[fgh] Ash played Ultra Ball.
+- [fgh] Ash discarded 2 cards.
+   • Lance, Lance
+- [fgh] Ash drew Radiant Alakazam.
+- [fgh] Ash shuffled their deck.
+[fgh] Ash's Dragapult ex used Phantom Dive on [fgh] Gary’s Munkidori for 200 damage.
+- [fgh] Ash put a damage counter on [fgh] Ash's Fezandipiti ex.
+- [fgh] Ash put a damage counter on [fgh] Ash's Latias ex.
+- [fgh] Ash put 4 damage counters on [fgh] Ash's Munkidori.
+[fgh] Gary's Munkidori was Knocked Out!
+- 2 cards were discarded from [fgh] Gary's Munkidori.
+   • Luminous Energy, Basic Fire Energy
+[fgh] Ash took a Prize card.
+A card was added to [fgh] Ash's hand.
+[fgh] Gary's Dragapult ex is now in the Active Spot.
+
+[fgh] Gary's Turn
+[fgh] Gary drew Luminous Energy.
+[fgh] Gary attached Luminous Energy to Dragapult ex in the Active Spot.
+[fgh] Gary played Counter Catcher.
+- [fgh] Ash's Fezandipiti ex was switched with [fgh] Ash's Dragapult ex to become the Active Pokémon.
+[fgh] Ash's Fezandipiti ex is now in the Active Spot.
+[fgh] Gary's Munkidori used Adrena-Brain.
+- [fgh] Gary moved a damage counter from [fgh] Gary's Latias ex to [fgh] Gary's Dragapult ex.
+[fgh] Ash's Dragapult ex was Knocked Out!
+- 5 cards were discarded from [fgh] Ash's Dragapult ex.
+   • Basic Psychic Energy, Basic Fire Energy, Drakloak, Dreepy, Rescue Board
+Opponent conceded. [fgh] Gary wins.
+
