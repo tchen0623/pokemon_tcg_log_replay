@@ -3,10 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PTCGL Replay MVP — 宝可梦 Live 对战回放</title>
+<title>PTCGL Replay+ — 宝可梦 Live 对战回放</title>
+<meta name="description" content="把 Pokémon TCG Live 的战斗日志变成可逐帧复盘的完整回放：剩余血量、能量附着、主视角明牌、放逐区、对局统计。纯浏览器本地解析，日志不上传。">
+<meta property="og:title" content="PTCGL Replay+ — 宝可梦 Live 对战回放">
+<meta property="og:description" content="导入 battle log，逐帧复盘整局对战：血量/能量/手牌/放逐区全还原。纯本地解析，隐私安全。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tchen0623.github.io/pokemon_tcg_log_replay/">
+<meta property="og:image" content="https://tchen0623.github.io/pokemon_tcg_log_replay/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🃏</text></svg>">
 <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
+<div id="loadbar"><div id="loadbar-fill"></div><span id="loadbar-text"></span></div>
 <div id="app">
   <header>
     <div class="logo">PTCGL <span>Replay+</span></div>
@@ -65,6 +74,10 @@
       <button id="w-file">导入日志文件</button>
       <button id="w-paste">粘贴日志</button>
     </div>
+    <p style="color:var(--dim);font-size:11px;margin-top:22px;line-height:1.7">
+      🔒 纯静态网站 · 解析 100% 在你的浏览器本地完成 · 日志不经过任何服务器<br>
+      卡牌数据来自 <a href="https://tcgdex.dev" target="_blank" rel="noopener" style="color:var(--accent)">TCGdex</a> · 本项目为玩家工具，与 The Pokémon Company 无关
+    </p>
   </div>
 </div>
 

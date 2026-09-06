@@ -19,14 +19,55 @@ const WIN_TEXT = { concede: '对手认输', prizes: '拿完全部奖品卡', no_
 
 // ---------- data ----------
 async function loadDb() {
+  // 轻量数据立即加载; 12.8MB 全量卡库改为首次导入时按需加载(见 ensureFullIndex)
   const fetchJson = async (url) => {
     try { const r = await fetch(url); return r.ok ? await r.json() : null; } catch { return null; }
   };
   cachedDb = (await fetchJson('data/cards-db.json')) || {};
   localImages = (await fetchJson('data/local-images.json')) || {};
-  fullIndex = await fetchJson('data/cards-full.json');
   cardDb = cachedDb;
 }
+
+// 全量卡库: 首次使用时流式下载并显示进度, 失败可重试, 页面秒开
+let fullIndexPromise = null;
+function ensureFullIndex(onProgress) {
+  if (fullIndex) return Promise.resolve(fullIndex);
+  if (!fullIndexPromise) {
+    fullIndexPromise = (async () => {
+      const r = await fetch('data/cards-full.json');
+      if (!r.ok || !r.body) throw new Error('http ' + r.status);
+      const total = +r.headers.get('content-length') || 13451504;
+      const reader = r.body.getReader();
+      const chunks = [];
+      let got = 0;
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        chunks.push(value); got += value.length;
+        if (onProgress) onProgress(Math.min(1, got / total));
+      }
+      const buf = new Uint8Array(got);
+      let off = 0;
+      for (const c of chunks) { buf.set(c, off); off += c.length; }
+      fullIndex = JSON.parse(new TextDecoder().decode(buf));
+      return fullIndex;
+    })();
+    fullIndexPromise.catch(() => { fullIndexPromise = null; }); // 失败允许下次重试
+  }
+  return fullIndexPromise;
+}
+
+function showLoading(text) {
+  const bar = $('#loadbar');
+  bar.classList.add('show');
+  $('#loadbar-fill').style.width = '0%';
+  $('#loadbar-text').textContent = text;
+}
+function setLoadingProgress(p, text) {
+  $('#loadbar-fill').style.width = (p * 100).toFixed(0) + '%';
+  if (text) $('#loadbar-text').textContent = text;
+}
+function hideLoading() { $('#loadbar').classList.remove('show'); }
 
 function cardImg(name, cls = '') {
   const c = name && cardDb[name];
@@ -56,10 +97,24 @@ function resetUiState() {
   $('#log-count').textContent = '';
 }
 
-function loadLog(text, label) {
-  resetUiState();
+async function loadLog(text, label) {
   const parsed = parseLog(text);
-  // 指纹匹配: 缓存命中用本地精修卡图, 其余从全量离线索引精确匹配版本
+  // 输入校验: 动作太少或识别不出双方玩家 → 友好报错, 保留当前回放
+  if (!parsed.actions || parsed.actions.length < 5 || parsed.players.length < 2) {
+    openModal(`<h3>⚠️ 无法识别这份日志</h3>
+      <p style="color:var(--dim);line-height:1.8">请确认内容是 Pokémon TCG Live 对局结束后从结算界面复制的<b>完整 battle log</b>。<br>
+      正确的日志通常以 "Setup" 开头，并包含 "won the coin toss" 等行。</p>`);
+    return;
+  }
+  resetUiState();
+  // 全量卡库按需加载(首次约 13MB), 失败则降级为本地缓存匹配
+  if (!fullIndex) {
+    showLoading('首次使用正在加载卡牌数据库…');
+    try {
+      await ensureFullIndex(p => setLoadingProgress(p, `首次使用正在加载卡牌数据库… ${(p * 100).toFixed(0)}%`));
+    } catch { /* 降级 */ }
+    hideLoading();
+  }
   if (fullIndex) {
     const m = matchCards(parsed, fullIndex, cachedDb, localImages);
     cardDb = m.db;

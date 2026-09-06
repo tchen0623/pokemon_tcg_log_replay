@@ -189,3 +189,18 @@ header .spacer { flex: 1; }
   background: rgba(2,6,16,.85); z-index: 60; }
 #welcome.show { display: flex; }
 #welcome .modal { text-align: center; }
+
+/* ---------- top loading bar ---------- */
+#loadbar {
+  position: fixed; top: 0; left: 0; right: 0; height: 30px; z-index: 999;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(15, 18, 32, .92); backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+#loadbar.show { display: flex; }
+#loadbar-fill {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 0%;
+  background: linear-gradient(90deg, rgba(96,165,250,.25), rgba(96,165,250,.5));
+  transition: width .15s ease;
+}
+#loadbar-text { position: relative; font-size: 12px; color: #bfdbfe; letter-spacing: .3px; }
